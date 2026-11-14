@@ -1,0 +1,164 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 14px 30px;
+  background-color: #111827;
+  border-bottom: 1px solid #252b38;
+}
+
+.navbar-logo {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2.2px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 15px;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.nav-button:hover {
+  color: #7c3aed;
+}
+
+.nav-button.active {
+  color: #7c3aed;
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 8px;
+}
+
+.search-input-container {
+  position: relative;
+  width: 180px;
+}
+
+.search-input-container .search-input {
+  width: 100%;
+  padding-right: 30px;
+}
+
+.clear-search-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  background-color: transparent;
+  transform: translateY(-50%);
+  border: none;
+  color: #6b7280;
+  font-size: 18px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search-input {
+  width: 180px;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-button {
+  background-color: #7c3aed;
+  color: #ffffff;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-button:hover {
+  background-color: #9333ea;
+}
+
+.menu-button {
+  display: none;
+  background-color: transparent;
+  border: 1px solid #7c3aed;
+  border-radius: 6px;
+  color: #7c3aed;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .navbar-logo {
+    font-size: 24px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .navbar-links,
+  .search-container {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links.menu-open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .search-container.menu-open {
+    display: flex;
+  }
+
+  .nav-button {
+    width: 100%;
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  .search-input {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px;
+  }
+
+  .navbar-logo {
+    font-size: 22px;
+  }
+
+  .search-button {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,31 @@
+.upcoming-container {
+  padding: 30px;
+}
+
+.upcoming-container h1 {
+  font-size: 28px;
+  margin: 0 0 25px;
+  color: #ffffff;
+  border-left: 4px solid #7c3aed;
+  padding-left: 7px;
+}
+
+@media (max-width: 768px) {
+  .upcoming-container {
+    padding: 20px;
+  }
+
+  .upcoming-container h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upcoming-container {
+    padding: 15px;
+  }
+  .upcoming-container h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,106 @@
+.popular-movies {
+  padding: 30px;
+}
+
+.popular-movies-title {
+  font-size: 28px;
+  margin: 0 0 25px;
+  color: #ffffff;
+  border-left: 4px solid #7c3aed;
+  padding-left: 7px;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.popular-button::before {
+  content: 'Popular';
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+.pagination button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #7c3aed;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #9333ea;
+}
+
+.pagination button:disabled {
+  background-color: #374151;
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagination p {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Tablet*/
+@media (max-width: 768px) {
+  .movies-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .popular-movies {
+    padding: 20px;
+  }
+
+  .popular-movies-title {
+    font-size: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .popular-movies {
+    padding: 15px;
+  }
+
+  .popular-movies-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .pagination {
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .pagination button {
+    padding: 8px 13px;
+    font-size: 12px;
+  }
+
+  .pagination p {
+    font-size: 13px;
+  }
+}
