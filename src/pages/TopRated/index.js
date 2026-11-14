@@ -21,12 +21,15 @@ const TopRated = () => {
       } catch (err) {
         setError('Something went wrong. Please try again later.')
       }
+
       setIsLoading(false)
     }
+
     fetchMovies()
   }, [page])
 
   let moviesContent
+
   if (isLoading) {
     moviesContent = <Loader />
   } else if (error) {
@@ -44,17 +47,19 @@ const TopRated = () => {
   return (
     <div className="top-rated-container">
       <h1>Top Rated Movies</h1>
+
       {moviesContent}
+
       <div className="pagination">
         <button
           type="button"
-          onClick={() => setPage(page > 1 ? page - 1 : 1)}
+          onClick={() => setPage(page - 1)}
           disabled={page === 1}
         >
-          Previous
+          Prev
         </button>
 
-        <p>Page {page}</p>
+        <p>{page}</p>
 
         <button type="button" onClick={() => setPage(page + 1)}>
           Next

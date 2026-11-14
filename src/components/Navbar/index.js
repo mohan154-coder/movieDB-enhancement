@@ -24,9 +24,13 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/">
-        <h1 className="navbar-logo">movieDB</h1>
+      <Link to="/" className="navbar-brand">
+        <h1 className="navbar-logo">
+          <span>movie</span>
+          <span className="logo-db">DB</span>
+        </h1>
       </Link>
+
       <button
         type="button"
         className="menu-button"
@@ -46,6 +50,7 @@ const Navbar = () => {
             aria-label="Popular"
           />
         </Link>
+
         <Link to="/top-rated">
           <button
             type="button"
@@ -57,6 +62,7 @@ const Navbar = () => {
             Top Rated
           </button>
         </Link>
+
         <Link to="/upcoming">
           <button
             type="button"
@@ -84,6 +90,7 @@ const Navbar = () => {
               }
             }}
           />
+
           {searchInput && (
             <button
               type="button"
@@ -94,6 +101,7 @@ const Navbar = () => {
             </button>
           )}
         </div>
+
         <button type="button" onClick={searchMovies} className="search-button">
           Search
         </button>

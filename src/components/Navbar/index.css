@@ -6,11 +6,20 @@
   border-bottom: 1px solid #252b38;
 }
 
+.navbar-brand {
+  text-decoration: none;
+}
+
 .navbar-logo {
   margin: 0;
   font-size: 28px;
   font-weight: bold;
   letter-spacing: 2.2px;
+  color: #ffffff;
+}
+
+.logo-db {
+  color: #a855f7;
 }
 
 .navbar-links {

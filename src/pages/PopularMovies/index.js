@@ -15,18 +15,22 @@ const PopularMovies = () => {
     const fetchMovies = async () => {
       setIsLoading(true)
       setError('')
+
       try {
         const data = await getPopularMovies(page)
         setMovies(data)
       } catch (err) {
         setError('Something went wrong. Please try again later.')
       }
+
       setIsLoading(false)
     }
+
     fetchMovies()
   }, [page])
 
   let moviesContent
+
   if (isLoading) {
     moviesContent = <Loader />
   } else if (error) {
@@ -44,17 +48,19 @@ const PopularMovies = () => {
   return (
     <div className="popular-movies">
       <h1 className="popular-movies-title">Popular Movies</h1>
+
       {moviesContent}
+
       <div className="pagination">
         <button
           type="button"
-          onClick={() => setPage(page > 1 ? page - 1 : 1)}
+          onClick={() => setPage(page - 1)}
           disabled={page === 1}
         >
-          Previous
+          Prev
         </button>
 
-        <p>Page {page}</p>
+        <p>{page}</p>
 
         <button type="button" onClick={() => setPage(page + 1)}>
           Next
